@@ -23,8 +23,8 @@ const NavBar = () => {
             <nav class="nav">
                 <ul></ul>
                 <ul class="navList">
-                    <li class="navItem"><a href="#">SignUp</a></li>
-                    <li class="navItem"><a href="#">SignIn</a></li>
+                    <li class="navItem"><a href="./SignUp">SignUp</a></li>
+                    <li class="navItem"><a href="./SignIn">SignIn</a></li>
                 </ul>
             </nav>
         </>
