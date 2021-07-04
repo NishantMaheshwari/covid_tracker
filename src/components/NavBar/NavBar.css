@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* Sidebar */
+#sidebar {
+  padding: 0;
+  position: fixed;
+  width: 180px;
+  left: -180px;
+  height: 100%;
+  list-style-type: none;
+  background: rgb(229, 234, 241);
+  position: absolute;
+  list-style: none;
+  transition: 500ms;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar ul li,
+#sidebar a {
+  text-decoration: none;
+  color: rgb(56, 56, 56);
+  transition: 1s ease;
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 190px;
+  top: 15px;
+}
+
+#sidebar .toggle-btn:hover {
+  cursor: pointer;
+}
+
+#sidebar .toggle-btn span {
+  display: block;
+  background: black;
+  width: 25px;
+  height: 4px;
+  margin: 3px 2px;
+}
+
+#sidebar .sidebar-brand {
+  background: rgb(209, 223, 241);
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+#sidebar li {
+  padding-left: 5px;
+  margin-bottom: 5px;
+  text-indent: 20px;
+  line-height: 40px;
+  transition: 0.5s ease;
+}
+
+#sidebar .list:hover {
+  background-color: #f5f7f9;
+  cursor: pointer;
+  text-indent: 25px;
+}
+
+/* Navigation Bar */
+.nav {
+  background: rgb(229, 234, 241);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 50px;
+}
+
+.navList {
+  width: auto;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.6rem;
+  max-height: 100%;
+  opacity: 1;
+  list-style: none;
+}
+
+.navItem {
+  margin-top: 13px;
+  padding: 0.16rem 2rem;
+}
+
+.navItem a {
+  color: rgb(56, 56, 56);
+  transition: color 0.3s;
+}
+
+.navItem a:hover {
+  color: rgb(112, 165, 235);
+}

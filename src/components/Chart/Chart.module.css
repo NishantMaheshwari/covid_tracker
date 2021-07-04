@@ -1,8 +1,5 @@
-.container{
-    display: flex
-    !important;
-    justify-content: center
-    !important;
-    width: 300px
-    !important;
+.container {
+  display: flex !important;
+  justify-content: center !important;
+  width: 500px !important;
 }
