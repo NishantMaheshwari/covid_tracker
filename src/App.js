@@ -1,34 +1,33 @@
-import React from "react";
-import { Cards, Chart, CountryPicker } from "./components";
-import styles from "./App.module.css";
-import { fetchData } from "./api";
+// import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SignIn from './components/SignUp-SignIn/SignIn';
+import SignUp from './components/SignUp-SignIn/SignUp';
+// import Error from './Error';
+import Dashboard from './Dashboard'
 
-class App extends React.Component {
-  state = {
-    data: {},
-    country: '',
-  };
-
-  async componentDidMount() {
-    const fetchedData = await fetchData();
-    this.setState({ data: fetchedData });
-  }
-
-  handleCountryChange=async(country)=>{
-   const fetchedData=await fetchData(country);
-   this.setState({ data: fetchedData, country: country });
-  }
+function App() {
   
-  render() {
-    const { data,country } = this.state;
-    return (
-      <div className={styles.container}>
-        <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country}/>
-      </div>
-    );
-  }
+  return (
+    <>
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Dashboard />
+            </Route>
+            <Route path="/SignUp">
+              <SignUp />
+            </Route>
+            <Route path="/SignIn">
+              <SignIn />
+            </Route>
+            {/* <Route path='*'>
+              <Error />
+            </Route> */}
+          </Switch>
+        </Router>
+    </>
+  );
 }
 
 export default App;
