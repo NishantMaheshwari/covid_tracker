@@ -13,10 +13,24 @@
 
 .infected {
   border-bottom: 10px solid rgb(0, 0, 255, 0.5);
+  transition: 400ms;
 }
+/* .infected:hover {
+  border-bottom: 15px solid rgb(0, 0, 255, 0.5);
+} */
+
 .recovered {
   border-bottom: 10px solid rgb(0, 255, 0, 0.5);
+  transition: 400ms;
 }
+/* .recovered:hover {
+  border-bottom: 15px solid rgb(0, 255, 0, 0.5);
+} */
+
 .deaths {
   border-bottom: 10px solid rgb(255, 0, 0, 0.5);
+  transition: 400ms;
 }
+/* .deaths:hover {
+  border-bottom: 15px solid rgb(255, 0, 0, 0.5);
+} */

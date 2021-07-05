@@ -5,6 +5,8 @@ const SignUp = () => {
   document.title = 'Covid Portal | SignUp'
 
   return (
+    <>
+    <div className='back'><a href="./">Back To Dashboard</a></div>
     <div className='container'>
         <div className='form-container'>
           <h2>SignUp</h2>
@@ -24,9 +26,9 @@ const SignUp = () => {
               <label htmlFor="password">Password</label>
               <input type='password' name='password'/>
             </div>
-            <div className='info'>
+            {/* <div className='info'>
               <small>Password must have atleast 8 characters.</small>
-            </div>
+            </div> */}
             <div className='password'>
               <label htmlFor="confirmpassword">Confirm Password</label>
               <input type='password' name='confirmpassword'/>
@@ -37,6 +39,7 @@ const SignUp = () => {
           </form>
         </div>
       </div>
+      </>
   );
 };
 
