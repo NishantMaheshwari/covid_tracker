@@ -5,22 +5,95 @@
   font-size: 16px;
 }
 
+/* Toggle */
+input[type="checkbox"]:checked ~ #sidebar {
+  transform: translateX(15px);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 30px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
+}
+.spinner {
+  /* margin-top: 10px; */
+  margin-left: 20px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(28, 123, 179);
+}
+
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
 /* Sidebar */
 #sidebar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
   padding: 0;
   position: fixed;
   width: 180px;
-  left: -180px;
-  height: 100%;
-  list-style-type: none;
-  background: rgb(229, 234, 241);
+  margin-top: 70px;
+  height: 87%;
+  background: rgb(255, 255, 255);
   position: absolute;
-  list-style: none;
-  transition: 500ms;
+  transform: translateX(-180px);
+  transition: transform 250ms ease-in-out;
 }
 
 #sidebar.active {
-  left: 0;
+  left: 10px;
 }
 
 #sidebar ul li,
@@ -32,7 +105,7 @@
 
 #sidebar .toggle-btn {
   position: absolute;
-  left: 190px;
+  left: 230px;
   top: 15px;
 }
 
@@ -49,11 +122,16 @@
 }
 
 #sidebar .sidebar-brand {
-  background: rgb(209, 223, 241);
+  border-radius: 5px;
+  background: rgb(138, 144, 151);
   height: 50px;
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 50px;
+}
+
+#sidebar .sidebar-brand > a {
+  color: #fff;
 }
 
 #sidebar li {
@@ -62,17 +140,39 @@
   text-indent: 20px;
   line-height: 40px;
   transition: 0.5s ease;
+  list-style: none;
 }
 
 #sidebar .list:hover {
-  background-color: #f5f7f9;
+  /* background-color: #abacad; */
+  background-color: rgb(119, 190, 231);
   cursor: pointer;
-  text-indent: 25px;
+  text-indent: 35px;
+}
+
+#sidebar .list > a {
+  text-decoration: none;
+  color: rgb(41, 140, 197);
+}
+
+#sidebar .list:hover > a {
+  color: #fff;
 }
 
 /* Navigation Bar */
+
+.nav1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .nav {
-  background: rgb(229, 234, 241);
+  margin-top: 12px;
+  width: 97%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -87,21 +187,31 @@
   flex-direction: row;
   justify-content: center;
   font-size: 1.6rem;
-  max-height: 100%;
+  /* max-height: 100%; */
   opacity: 1;
   list-style: none;
 }
 
 .navItem {
-  margin-top: 13px;
-  padding: 0.16rem 1rem;
+  height: 100%;
+  /* background: rgb(116, 116, 116); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 1rem;
 }
 
-.navItem a {
-  color: rgb(56, 56, 56);
-  transition: color 0.3s;
+.navItem > a {
+  color: rgb(28, 123, 179);
+  text-decoration: none;
+  transition: 500ms;
 }
 
-.navItem a:hover {
-  color: rgb(112, 165, 235);
+.navItem:hover > a {
+  color: rgb(255, 255, 255);
+}
+
+.navItem:hover {
+  background: rgb(41, 140, 197);
+  transition: 500ms;
 }
