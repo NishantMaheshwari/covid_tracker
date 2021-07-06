@@ -5,17 +5,17 @@ body {
 }
 
 body {
-  background: rgb(209, 223, 241);
   font-family: Lato;
 }
 
 .container {
-  height: 100%;
-  padding-top: 2rem;
+  background: rgb(219, 229, 243);
+  height: 100vh;
+  /* padding-top: 2rem; */
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -126,5 +126,6 @@ button:disabled {
 }
 
 .back {
-  margin: 10px;
+  width: 90%;
+  margin: 20px;
 }

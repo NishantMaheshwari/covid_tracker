@@ -51,7 +51,8 @@
 #sidebar .sidebar-brand {
   background: rgb(209, 223, 241);
   height: 50px;
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
   line-height: 50px;
 }
 
@@ -93,7 +94,7 @@
 
 .navItem {
   margin-top: 13px;
-  padding: 0.16rem 2rem;
+  padding: 0.16rem 1rem;
 }
 
 .navItem a {
